@@ -7,55 +7,32 @@ Description: Thème pour un blog littéraire
 Requires at least: WordPress 5.0
 Version: 1.0
 */
+body{
+    margin: 0;
+    padding:0;
+}
+
 .barre{
     background-color: #D09831;
     margin: 0px;
 }
-.navigation {
-    list-style:none !important;
-    color:#FFF;
-    padding:10px;
-    font-size:20px;
-    text-decoration:none;
-}
-     
-.pages {
-    background-color:#64abfb;
-    padding:0;
-    margin:0;
-}
-     
-.navigation{
+
+ul{
     list-style: none;
-    line-height:44px;
-    float:left;
-    background-color:#64abfb;
-    }
-     
-.navigation > a {
-    color:#FFF;
-    padding:10px;
-    font-size:20px;
-    text-decoration:none;
-    }
-     
-    .navigation a:focus {
-    border-bottom:3px #FFF solid;
-    }
-    .deroulante { 
-    display:none; 
-    } /* Rend le menu déroulant caché par défaut */
-     
-    .navigation a:focus .deroulante { /* Affiche la dropNav au survol de la souris avec la class .drop */
-    z-index:99999;
-    display:list-item !important;
-    position:absolute;
-    margin-top:5px;
-    margin-left:-10px;
-    }
-     
-    .navigation:focus .sous_titre {
-    float:none;
+    display : flex;
+    justify-content : center;
+}
+
+li > a{
+    text-decoration: none;
+    padding: 10px;
+    color: black;
+}
+
+.menu{
+    display: flex;
+    background-color: saddlebrown;
+    align-content : space-between;
 }
 
 @media screen and (max-width: 600px)

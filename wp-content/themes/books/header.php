@@ -11,20 +11,20 @@
         <div class="tete">
             <div class="barre">
                 <a href="<?php echo home_url( '/' ); ?>">
-                    <img src="<?php echo get_template_directory_uri(); ?>/image/logo.png" alt="Logo">
+                    <img class="logo" src="<?php echo get_template_directory_uri(); ?>/image/logo.png" alt="Logo">
                 </a>
             </div>
             <div class="menu">
-                <nav class="navigation">
-                    <ul>
-                        <li class="pages"><a href="#">Menu</a></li>
-                        <ul class="deroulante">
-                            <li class="sous_titre"><a href="#">Accueil</a></li>
-                            <li class="sous_titre"><a href="#">Articles</a></li>
-                            <li class="sous_titre"><a href="#">Tag</a></li>
-                        </ul>
-                    </ul>
-                </nav>
+                <?php 
+                    if(has_nav_menu('header_menu')){
+                        wp_nav_menu(
+                            array(
+                                'theme_location' => 'header_menu',
+                                'menu_class' => 'navbar'
+                            )
+                        );
+                    }
+                ?>
             </div>
         </div>  
   </header>
